@@ -1,0 +1,1478 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_ZABBIX",
+      "label": "Zabbix",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "alexanderzobnin-zabbix-datasource",
+      "pluginName": "Zabbix"
+    },
+    {
+      "name": "DS_API-IXC",
+      "label": "api-ixc",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "yesoreyeram-infinity-datasource",
+      "pluginName": "Infinity"
+    }
+  ],
+  "__elements": {},
+  "__requires": [
+    {
+      "type": "datasource",
+      "id": "alexanderzobnin-zabbix-datasource",
+      "name": "Zabbix",
+      "version": "4.5.2"
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "11.1.3"
+    },
+    {
+      "type": "panel",
+      "id": "marcusolsson-dynamictext-panel",
+      "name": "Business Text",
+      "version": "5.2.0"
+    },
+    {
+      "type": "panel",
+      "id": "volkovlabs-echarts-panel",
+      "name": "Business Charts",
+      "version": "6.1.0"
+    },
+    {
+      "type": "panel",
+      "id": "yesoreyeram-boomtheme-panel",
+      "name": "Boom Theme",
+      "version": "0.2.1"
+    },
+    {
+      "type": "datasource",
+      "id": "yesoreyeram-infinity-datasource",
+      "name": "Infinity",
+      "version": "2.9.5"
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [
+    {
+      "asDropdown": false,
+      "icon": "external link",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [
+        "IXC"
+      ],
+      "targetBlank": false,
+      "title": "New link",
+      "tooltip": "",
+      "type": "dashboards",
+      "url": ""
+    }
+  ],
+  "panels": [
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "${DS_ZABBIX}"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 11,
+      "options": {
+        "activeTheme": "Tema Novo",
+        "disableThemePicker": true,
+        "themes": [
+          {
+            "name": "Tema Novo",
+            "styles": [
+              {
+                "props": {
+                  "theme": "default"
+                },
+                "type": "basetheme"
+              },
+              {
+                "props": {
+                  "url": ""
+                },
+                "type": "bgimage"
+              },
+              {
+                "props": {
+                  "url": ""
+                },
+                "type": "url"
+              },
+              {
+                "props": {
+                  "text": "// Paineis\n.css-1ijfwvk-panel-container {\nbackground-color: #2F3B47;\nborder-radius: 24px;\n}\n.css-18yh62t-panel-container {\nborder-radius: 24px;\n}\n.css-1y6tb5b-panel-container-panel-transparent-container {\nborder-radius: 24px;\n}\n// Header\n.css-19gv2o1-panel-header {\n background: linear-gradient(90deg, #33394a, #4a7893);\n  border-top-left-radius: 24px;\n  border-top-right-radius: 24px;\n  border-bottom-left-radius:0px;\n  border-bottom-right-radius: 0px;\n  transition: all 0.3s ease;\n}\n.css-4sw7w0 {\nfont-weight: bold;\ncolor: #2dd3e9;\nanimation: blink 2s infinite;\n}\n.css-1bgjk0t {\nbackground-image: linear-gradient(50deg, #122936, #4a7893);\n}\n\n//Fundo\n.css-1978mzo-canvas-content {\nbackground-color: #243342;\n}\n\n//Variaveis\n.css-1apgo1t {\nborder-radius 6px;\n}\n\n//Variaveis\n.css-8tk2dk-input-input {\nborder-radius 6px;\n}\n\n//Variaveis\n.gf-form-label {\nborder-radius 6px;\nbackground-color: #3e475480;\n}\n.css-cuxhvs-button {\nborder-radius 6px;\n}\n\n.gf-form-label--variable {\n    color: #CCCCDC;\n}\n\n//Rows\n.css-6bn9eg {\nborder-radius 8px;\n}\n\n@keyframes fadeIn {\n    0% {\n        opacity: 0;\n    }\n    100% {\n        opacity: 1;\n    }\n}\n\n@keyframes blink {\n  0% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0.3;\n  }\n  100% {\n    opacity: 1;\n  }\n}"
+                },
+                "type": "style"
+              },
+              {
+                "props": {
+                  "color": "#ccccdc"
+                },
+                "type": "panel-container-bg-color"
+              }
+            ]
+          }
+        ]
+      },
+      "pluginVersion": "0.2.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "yesoreyeram-boomtheme-panel"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 1
+      },
+      "id": 48,
+      "panels": [],
+      "title": "Contas a Receber",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "grafana",
+        "uid": "grafana"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "#EAB839",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 24,
+        "x": 0,
+        "y": 2
+      },
+      "id": 43,
+      "options": {
+        "afterRender": "",
+        "content": "<!DOCTYPE html>\r\n<html lang=\"pt-BR\">\r\n\r\n<body>\r\n  <div class=\"menu-principal\">\r\n    <div class=\"content logo\">\r\n      <img src=\"https://img.swapcard.com/?u=https%3A%2F%2Fcdn-api.swapcard.com%2Fpublic%2Fimages%2Fac950484c6134bf79537732c9f408649.png&q=0.8&m=fit&w=400&h=200\" alt=\"Logo Esquerda\" class=\"left-image\" />\r\n    </div>\r\n    <div class=\"text-container\">\r\n      <p class=\"monitor-text\">\r\n        MONITOR <b class=\"genieacs-text\">IXC-API</b>\r\n      </p>\r\n    </div>\r\n    <div class=\"content time-container\">\r\n      <p class=\"time-text\">\r\n      </p>\r\n    </div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "defaultContent": "<!DOCTYPE html>\r\n<html lang=\"pt-BR\">\r\n\r\n<body>\r\n  <div class=\"menu-principal\">\r\n    <div class=\"content logo\">\r\n      <img src=\"https://img.swapcard.com/?u=https%3A%2F%2Fcdn-api.swapcard.com%2Fpublic%2Fimages%2Fac950484c6134bf79537732c9f408649.png&q=0.8&m=fit&w=400&h=200\" alt=\"Logo Esquerda\" class=\"left-image\" />\r\n    </div>\r\n    <div class=\"text-container\">\r\n      <p class=\"monitor-text\">\r\n        MONITOR <b class=\"genieacs-text\">IXC-API</b>\r\n      </p>\r\n    </div>\r\n    <div class=\"content time-container\">\r\n      <p class=\"time-text\">\r\n      </p>\r\n    </div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles",
+          "helpers",
+          "default"
+        ],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "allRows",
+        "styles": "body {\r\n    width: 100%;\r\n    height: 100%;\r\n    margin: 0;\r\n    padding: 0;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: #f0f0f0; /* Ajuste a cor de fundo conforme necessário */\r\n    box-sizing: border-box;\r\n}\r\n\r\n.menu-principal {\r\n    cursor: pointer;\r\n    border-radius: 24px;\r\n    width: 100%;\r\n    background-color: #134B70;\r\n    height: 125px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    box-sizing: border-box;\r\n    padding: 0 40px;\r\n}\r\n\r\n.content {\r\n    position: relative;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.logo {\r\n    width: 150px;\r\n}\r\n\r\n.logo img {\r\n    width: 100%;\r\n    height: auto;\r\n}\r\n\r\n.text-container {\r\n    flex: 1;\r\n    text-align: center;\r\n    margin-left: 220px; /* Ajuste o valor conforme necessário */\r\n}\r\n\r\n.monitor-text {\r\n    font-size: 240%;\r\n    font-weight: bold;\r\n    margin: 0;\r\n    color: #ffffff;\r\n}\r\n\r\n.genieacs-text {\r\n    font-weight: bold;\r\n    color: #2dd3e9;\r\n    text-shadow: 0 0 5px rgba(45, 211, 233, 0.5), 0 0 10px rgba(45, 211, 233, 0.4), 0 0 15px rgba(45, 211, 233, 0.3), 0 0 20px rgba(45, 211, 233, 0.2), 0 0 25px rgba(45, 211, 233, 0.1);\r\n    animation: blink 1.8s infinite;\r\n}\r\n\r\n.time-container {\r\n    width: 320px;\r\n    //text-align: center;\r\n    background: transparent; /* Ajuste a cor de fundo conforme necessário */\r\n    padding: 18px;\r\n    border-radius: 12px;\r\n    color: #ffffff;\r\n}\r\n\r\n.time-text {\r\n    font-size: 18px;\r\n    font-weight: bold;\r\n    margin: 0;\r\n}\r\n",
+        "wrap": true
+      },
+      "pluginVersion": "5.2.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_API-IXC}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "#EAB839",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 0,
+        "y": 6
+      },
+      "id": 34,
+      "options": {
+        "afterRender": "",
+        "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<body>\r\n  <div class=\"widget\">\r\n    <div class=\"icon\"></div>\r\n    <div class=\"info\">\r\n      <p class=\"number\">{{valorTotalEmAberto}}</p>\r\n      <p class=\"label\">TOTAL A RECEBER</p>\r\n    </div>\r\n    <div class=\"chart\"></div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "defaultContent": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<body>\r\n  <div class=\"widget\">\r\n    <div class=\"icon\"></div>\r\n    <div class=\"info\">\r\n      <p class=\"number\">{{valorTotalEmAberto}}</p>\r\n      <p class=\"label\">TOTAL A RECEBER</p>\r\n    </div>\r\n    <div class=\"chart\"></div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles",
+          "helpers",
+          "default"
+        ],
+        "externalStyles": [],
+        "helpers": "let financeiro_status = [];\r\nlet financeiro_data_vencimento = [];\r\nlet financeiro_valor_aberto = [];\r\n\r\n// Coletando os dados necessários\r\ncontext.panelData.series.forEach((s) => {\r\n  const statusField = s.fields.find((f) => f.name === 'status');\r\n  const dataVencimentoField = s.fields.find((f) => f.name === 'data_vencimento');\r\n  const valorAbertoField = s.fields.find((f) => f.name === 'valor_aberto');\r\n\r\n  if (statusField) financeiro_status = statusField.values.toArray();\r\n  if (dataVencimentoField) financeiro_data_vencimento = dataVencimentoField.values.toArray();\r\n  if (valorAbertoField) financeiro_valor_aberto = valorAbertoField.values.toArray();\r\n});\r\n\r\n// Função para converter o valor para número\r\nfunction converterValor(valorString) {\r\n  return parseFloat(valorString.replace(',', '.')) || 0;\r\n}\r\n\r\n// Função para formatar o valor como BRL (R$)\r\nfunction formatarValor(valor) {\r\n  return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });\r\n}\r\n\r\n// Somando o total de valores em aberto\r\nconst totalEmAberto = financeiro_valor_aberto.reduce((acc, valor, index) => {\r\n  const valorConvertido = converterValor(valor);\r\n  if (!isNaN(valorConvertido)) {\r\n    acc += valorConvertido;\r\n  }\r\n  return acc;\r\n}, 0);\r\n\r\n// Registrando o valor total em aberto como um helper do Handlebars\r\ncontext.handlebars.registerHelper('valorTotalEmAberto', () => formatarValor(totalEmAberto));\r\n\r\n// Retornando o valor total em aberto formatado\r\nreturn context.handlebars.helpers.valorTotalEmAberto();\r\n",
+        "renderMode": "allRows",
+        "styles": "body {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 100vh;\r\n    background-color: #f0f4f8;\r\n    margin: 0;\r\n}\r\n\r\n.widget {\r\n    //background-image: url('https://static.wixstatic.com/media/c319a6_92c6435731c24c5bbad16b32bad769a4~mv2.webp');\r\n    background-color: #134B70;\r\n    background-size: cover;\r\n    background-position: center;\r\n    border-radius: 20px;\r\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);\r\n    padding: 30px 18px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    cursor: pointer;\r\n    transition: all 0.3s ease;\r\n    animation: fadeIn 2s ease-in-out;\r\n}\r\n\r\n.widget:hover {\r\n    filter: brightness(0.8);\r\n}\r\n\r\n.widget .icon {\r\n    width: 65px;\r\n    height: 65px;\r\n    background-image: url('https://img.icons8.com/?size=100&id=21584&format=png&color=000000');\r\n    background-size: cover;\r\n}\r\n\r\n.widget .info {\r\n    text-align: right;\r\n}\r\n\r\n.widget .info .number {\r\n    font-size: 22px;\r\n    font-weight: bold;\r\n    color: #fff;\r\n    margin: 0;\r\n}\r\n\r\n.widget .info .label {\r\n    background-color: transparent;\r\n    color: #fff;\r\n    font-size: 16px;\r\n    font-weight: lighter;\r\n    margin: 0;\r\n}\r\n\r\n.widget .chart {\r\n    position: absolute;\r\n    top: 20px;\r\n    right: 20px;\r\n}\r\n\r\n@keyframes fadeIn {\r\n    0% {\r\n        opacity: 0;\r\n    }\r\n    100% {\r\n        opacity: 1;\r\n    }\r\n}\r\n",
+        "wrap": true
+      },
+      "pluginVersion": "5.2.0",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "status",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "data_vencimento",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "pagamento_valor",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "valor_aberto",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "id_cliente",
+              "text": "",
+              "type": "string"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_API-IXC}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "$.registros",
+          "source": "url",
+          "type": "json",
+          "url": "https://${host}/webservice/v1/fn_areceber",
+          "url_options": {
+            "body_content_type": "application/json",
+            "body_type": "raw",
+            "data": "{\r\n  \"qtype\": \"fn_areceber.data_vencimento\",\r\n  \"query\": \"$data_financeiro\",\r\n  \"oper\": \"L\",\r\n  \"page\": \"1\",\r\n  \"rp\": \"100000\",\r\n  \"sortname\": \"fn_areceber.id\",\r\n  \"sortorder\": \"desc\"\r\n}",
+            "headers": [
+              {
+                "key": "ixcsoft",
+                "value": "listar"
+              }
+            ],
+            "method": "POST",
+            "params": []
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_API-IXC}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "#EAB839",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 4,
+        "y": 6
+      },
+      "id": 36,
+      "options": {
+        "afterRender": "",
+        "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<body>\r\n  <div class=\"widget\">\r\n    <div class=\"icon\"></div>\r\n    <div class=\"info\">\r\n      <p class=\"number\">{{valorTotalRecebidos}}</p>\r\n      <p class=\"label\">TOTAL RECEBIDOS</p>\r\n    </div>\r\n    <div class=\"chart\"></div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "defaultContent": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<body>\r\n  <div class=\"widget\">\r\n    <div class=\"icon\"></div>\r\n    <div class=\"info\">\r\n      <p class=\"number\">{{valorTotalRecebidos}}</p>\r\n      <p class=\"label\">TOTAL RECEBIDOS</p>\r\n    </div>\r\n    <div class=\"chart\"></div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles",
+          "helpers",
+          "default"
+        ],
+        "externalStyles": [],
+        "helpers": "let financeiro_status = [];\r\nlet financeiro_data_vencimento = [];\r\nlet financeiro_pagamento_valor = [];\r\n\r\n// Coletando os dados necessários\r\ncontext.panelData.series.forEach((s) => {\r\n  const statusField = s.fields.find((f) => f.name === 'status');\r\n  const dataVencimentoField = s.fields.find((f) => f.name === 'data_vencimento');\r\n  const pagamentoValorField = s.fields.find((f) => f.name === 'pagamento_valor');\r\n\r\n  if (statusField) financeiro_status = statusField.values.toArray();\r\n  if (dataVencimentoField) financeiro_data_vencimento = dataVencimentoField.values.toArray();\r\n  if (pagamentoValorField) financeiro_pagamento_valor = pagamentoValorField.values.toArray();\r\n});\r\n\r\n// Função para converter o valor recebido para número\r\nfunction converterValor(valorString) {\r\n  return parseFloat(valorString.replace(',', '.')) || 0;\r\n}\r\n\r\n// Função para formatar o valor como BRL (R$)\r\nfunction formatarValor(valor) {\r\n  return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });\r\n}\r\n\r\n// Somando o total de valores recebidos considerando apenas o status \"R\"\r\nconst totalRecebidos = financeiro_pagamento_valor.reduce((acc, valor, index) => {\r\n  if (financeiro_status[index] === 'R') {  // Considera apenas status \"R\"\r\n    const valorConvertido = converterValor(valor);\r\n    if (!isNaN(valorConvertido)) {\r\n      acc += valorConvertido;\r\n    }\r\n  }\r\n  return acc;\r\n}, 0);\r\n\r\n// Registrando o valor total como um helper do Handlebars\r\ncontext.handlebars.registerHelper('valorTotalRecebidos', () => formatarValor(totalRecebidos));\r\n\r\n// Retornando o valor total formatado\r\nreturn context.handlebars.helpers.valorTotalRecebidos();\r\n",
+        "renderMode": "allRows",
+        "styles": "body {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 100vh;\r\n    background-color: #f0f4f8;\r\n    margin: 0;\r\n}\r\n\r\n.widget {\r\n    //background-image: url('https://static.wixstatic.com/media/c319a6_92c6435731c24c5bbad16b32bad769a4~mv2.webp');\r\n    background-color: #134B70;\r\n    background-size: cover;\r\n    background-position: center;\r\n    border-radius: 20px;\r\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);\r\n    padding: 30px 18px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    cursor: pointer;\r\n    transition: all 0.3s ease;\r\n    animation: fadeIn 2s ease-in-out;\r\n}\r\n\r\n.widget:hover {\r\n    filter: brightness(0.8);\r\n}\r\n\r\n.widget .icon {\r\n    width: 65px;\r\n    height: 65px;\r\n    background-image: url('https://img.icons8.com/?size=100&id=13561&format=png&color=000000');\r\n    background-size: cover;\r\n}\r\n\r\n.widget .info {\r\n    text-align: right;\r\n}\r\n\r\n.widget .info .number {\r\n    font-size: 22px;\r\n    font-weight: bold;\r\n    color: #fff;\r\n    margin: 0;\r\n}\r\n\r\n.widget .info .label {\r\n    background-color: transparent;\r\n    color: #fff;\r\n    font-size: 16px;\r\n    font-weight: lighter;\r\n    margin: 0;\r\n}\r\n\r\n.widget .chart {\r\n    position: absolute;\r\n    top: 20px;\r\n    right: 20px;\r\n}\r\n\r\n@keyframes fadeIn {\r\n    0% {\r\n        opacity: 0;\r\n    }\r\n    100% {\r\n        opacity: 1;\r\n    }\r\n}\r\n",
+        "wrap": true
+      },
+      "pluginVersion": "5.2.0",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "status",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "data_vencimento",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "pagamento_valor",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "valor_aberto",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "id_cliente",
+              "text": "",
+              "type": "string"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_API-IXC}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "$.registros",
+          "source": "url",
+          "type": "json",
+          "url": "https://${host}/webservice/v1/fn_areceber",
+          "url_options": {
+            "body_content_type": "application/json",
+            "body_type": "raw",
+            "data": "{\r\n  \"qtype\": \"fn_areceber.data_vencimento\",\r\n  \"query\": \"$data_financeiro\",\r\n  \"oper\": \"L\",\r\n  \"page\": \"1\",\r\n  \"rp\": \"100000\",\r\n  \"sortname\": \"fn_areceber.id\",\r\n  \"sortorder\": \"desc\"\r\n}",
+            "headers": [
+              {
+                "key": "ixcsoft",
+                "value": "listar"
+              }
+            ],
+            "method": "POST",
+            "params": []
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_API-IXC}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "#EAB839",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 8,
+        "y": 6
+      },
+      "id": 38,
+      "options": {
+        "afterRender": "",
+        "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<body>\r\n  <div class=\"widget\">\r\n    <div class=\"icon\"></div>\r\n    <div class=\"info\">\r\n      <p class=\"number\">{{valorTotalRecebidos}}</p>\r\n      <p class=\"label\">PIX</p>\r\n    </div>\r\n    <div class=\"chart\"></div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "defaultContent": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<body>\r\n  <div class=\"widget\">\r\n    <div class=\"icon\"></div>\r\n    <div class=\"info\">\r\n      <p class=\"number\">{{valorTotalRecebidos}}</p>\r\n      <p class=\"label\">PIX</p>\r\n    </div>\r\n    <div class=\"chart\"></div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles",
+          "helpers",
+          "default"
+        ],
+        "externalStyles": [],
+        "helpers": "let financeiro_status = [];\r\nlet financeiro_data_vencimento = [];\r\nlet financeiro_pagamento_valor = [];\r\nlet financeiro_tipo_recebimento = [];\r\n\r\n// Coletando os dados necessários\r\ncontext.panelData.series.forEach((s) => {\r\n  const statusField = s.fields.find((f) => f.name === 'status');\r\n  const dataVencimentoField = s.fields.find((f) => f.name === 'data_vencimento');\r\n  const pagamentoValorField = s.fields.find((f) => f.name === 'pagamento_valor');\r\n  const tipoRecebimentoField = s.fields.find((f) => f.name === 'tipo_recebimento');\r\n\r\n  if (statusField) financeiro_status = statusField.values.toArray();\r\n  if (dataVencimentoField) financeiro_data_vencimento = dataVencimentoField.values.toArray();\r\n  if (pagamentoValorField) financeiro_pagamento_valor = pagamentoValorField.values.toArray();\r\n  if (tipoRecebimentoField) financeiro_tipo_recebimento = tipoRecebimentoField.values.toArray();\r\n});\r\n\r\n// Função para converter o valor recebido para número\r\nfunction converterValor(valorString) {\r\n  return parseFloat(valorString.replace(',', '.')) || 0;\r\n}\r\n\r\n// Função para formatar o valor como BRL (R$)\r\nfunction formatarValor(valor) {\r\n  return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });\r\n}\r\n\r\n// Somando o total de valores recebidos do tipo \"Pix\" considerando apenas o status \"R\"\r\nconst totalRecebidosPix = financeiro_pagamento_valor.reduce((acc, valor, index) => {\r\n  if (financeiro_status[index] === 'R' && financeiro_tipo_recebimento[index] === 'Pix') {  // Considera apenas status \"R\" e tipo \"Pix\"\r\n    const valorConvertido = converterValor(valor);\r\n    if (!isNaN(valorConvertido)) {\r\n      acc += valorConvertido;\r\n    }\r\n  }\r\n  return acc;\r\n}, 0);\r\n\r\n// Registrando o valor total como um helper do Handlebars\r\ncontext.handlebars.registerHelper('valorTotalRecebidos', () => formatarValor(totalRecebidosPix));\r\n\r\n// Retornando o valor total formatado\r\nreturn context.handlebars.helpers.valorTotalRecebidos();\r\n",
+        "renderMode": "allRows",
+        "styles": "body {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 100vh;\r\n    background-color: #f0f4f8;\r\n    margin: 0;\r\n}\r\n\r\n.widget {\r\n    //background-image: url('https://static.wixstatic.com/media/c319a6_92c6435731c24c5bbad16b32bad769a4~mv2.webp');\r\n    background-color: #134B70;\r\n    background-size: cover;\r\n    background-position: center;\r\n    border-radius: 20px;\r\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);\r\n    padding: 30px 18px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    cursor: pointer;\r\n    transition: all 0.3s ease;\r\n    animation: fadeIn 2s ease-in-out;\r\n}\r\n\r\n.widget:hover {\r\n    filter: brightness(0.8);\r\n}\r\n\r\n.widget .icon {\r\n    width: 65px;\r\n    height: 65px;\r\n    background-image: url('https://img.icons8.com/?size=100&id=Dk4sj0EM4b20&format=png&color=000000');\r\n    background-size: cover;\r\n}\r\n\r\n.widget .info {\r\n    text-align: right;\r\n}\r\n\r\n.widget .info .number {\r\n    font-size: 22px;\r\n    font-weight: bold;\r\n    color: #fff;\r\n    margin: 0;\r\n}\r\n\r\n.widget .info .label {\r\n    background-color: transparent;\r\n    color: #fff;\r\n    font-size: 16px;\r\n    font-weight: lighter;\r\n    margin: 0;\r\n}\r\n\r\n.widget .chart {\r\n    position: absolute;\r\n    top: 20px;\r\n    right: 20px;\r\n}\r\n\r\n@keyframes fadeIn {\r\n    0% {\r\n        opacity: 0;\r\n    }\r\n    100% {\r\n        opacity: 1;\r\n    }\r\n}\r\n",
+        "wrap": true
+      },
+      "pluginVersion": "5.2.0",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "status",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "data_vencimento",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "pagamento_valor",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "valor_aberto",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "id_cliente",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "tipo_recebimento",
+              "text": "",
+              "type": "string"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_API-IXC}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "$.registros",
+          "source": "url",
+          "type": "json",
+          "url": "https://${host}/webservice/v1/fn_areceber",
+          "url_options": {
+            "body_content_type": "application/json",
+            "body_type": "raw",
+            "data": "{\r\n  \"qtype\": \"fn_areceber.data_vencimento\",\r\n  \"query\": \"$data_financeiro\",\r\n  \"oper\": \"L\",\r\n  \"page\": \"1\",\r\n  \"rp\": \"100000\",\r\n  \"sortname\": \"fn_areceber.id\",\r\n  \"sortorder\": \"desc\"\r\n}",
+            "headers": [
+              {
+                "key": "ixcsoft",
+                "value": "listar"
+              }
+            ],
+            "method": "POST",
+            "params": []
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_API-IXC}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "#EAB839",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 12,
+        "y": 6
+      },
+      "id": 39,
+      "options": {
+        "afterRender": "",
+        "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<body>\r\n  <div class=\"widget\">\r\n    <div class=\"icon\"></div>\r\n    <div class=\"info\">\r\n      <p class=\"number\">{{valorTotalRecebidos}}</p>\r\n      <p class=\"label\">GATEWAY</p>\r\n    </div>\r\n    <div class=\"chart\"></div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "defaultContent": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<body>\r\n  <div class=\"widget\">\r\n    <div class=\"icon\"></div>\r\n    <div class=\"info\">\r\n      <p class=\"number\">{{valorTotalRecebidos}}</p>\r\n      <p class=\"label\">GATEWAY</p>\r\n    </div>\r\n    <div class=\"chart\"></div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles",
+          "helpers",
+          "default"
+        ],
+        "externalStyles": [],
+        "helpers": "let financeiro_status = [];\r\nlet financeiro_data_vencimento = [];\r\nlet financeiro_pagamento_valor = [];\r\nlet financeiro_tipo_recebimento = [];\r\n\r\n// Coletando os dados necessários\r\ncontext.panelData.series.forEach((s) => {\r\n  const statusField = s.fields.find((f) => f.name === 'status');\r\n  const dataVencimentoField = s.fields.find((f) => f.name === 'data_vencimento');\r\n  const pagamentoValorField = s.fields.find((f) => f.name === 'pagamento_valor');\r\n  const tipoRecebimentoField = s.fields.find((f) => f.name === 'tipo_recebimento');\r\n\r\n  if (statusField) financeiro_status = statusField.values.toArray();\r\n  if (dataVencimentoField) financeiro_data_vencimento = dataVencimentoField.values.toArray();\r\n  if (pagamentoValorField) financeiro_pagamento_valor = pagamentoValorField.values.toArray();\r\n  if (tipoRecebimentoField) financeiro_tipo_recebimento = tipoRecebimentoField.values.toArray();\r\n});\r\n\r\n// Função para converter o valor recebido para número\r\nfunction converterValor(valorString) {\r\n  return parseFloat(valorString.replace(',', '.')) || 0;\r\n}\r\n\r\n// Função para formatar o valor como BRL (R$)\r\nfunction formatarValor(valor) {\r\n  return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });\r\n}\r\n\r\n// Somando o total de valores recebidos do tipo \"Pix\" considerando apenas o status \"R\"\r\nconst totalRecebidosPix = financeiro_pagamento_valor.reduce((acc, valor, index) => {\r\n  if (financeiro_status[index] === 'R' && financeiro_tipo_recebimento[index] === 'Gateway') {  // Considera apenas status \"R\" e tipo \"Pix\"\r\n    const valorConvertido = converterValor(valor);\r\n    if (!isNaN(valorConvertido)) {\r\n      acc += valorConvertido;\r\n    }\r\n  }\r\n  return acc;\r\n}, 0);\r\n\r\n// Registrando o valor total como um helper do Handlebars\r\ncontext.handlebars.registerHelper('valorTotalRecebidos', () => formatarValor(totalRecebidosPix));\r\n\r\n// Retornando o valor total formatado\r\nreturn context.handlebars.helpers.valorTotalRecebidos();\r\n",
+        "renderMode": "allRows",
+        "styles": "body {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 100vh;\r\n    background-color: #f0f4f8;\r\n    margin: 0;\r\n}\r\n\r\n.widget {\r\n    //background-image: url('https://static.wixstatic.com/media/c319a6_92c6435731c24c5bbad16b32bad769a4~mv2.webp');\r\n    background-color: #134B70;\r\n    background-size: cover;\r\n    background-position: center;\r\n    border-radius: 20px;\r\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);\r\n    padding: 30px 18px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    cursor: pointer;\r\n    transition: all 0.3s ease;\r\n    animation: fadeIn 2s ease-in-out;\r\n}\r\n\r\n.widget:hover {\r\n    filter: brightness(0.8);\r\n}\r\n\r\n.widget .icon {\r\n    width: 65px;\r\n    height: 65px;\r\n    background-image: url('https://img.icons8.com/?size=100&id=59183&format=png&color=000000');\r\n    background-size: cover;\r\n}\r\n\r\n.widget .info {\r\n    text-align: right;\r\n}\r\n\r\n.widget .info .number {\r\n    font-size: 22px;\r\n    font-weight: bold;\r\n    color: #fff;\r\n    margin: 0;\r\n}\r\n\r\n.widget .info .label {\r\n    background-color: transparent;\r\n    color: #fff;\r\n    font-size: 16px;\r\n    font-weight: lighter;\r\n    margin: 0;\r\n}\r\n\r\n.widget .chart {\r\n    position: absolute;\r\n    top: 20px;\r\n    right: 20px;\r\n}\r\n\r\n@keyframes fadeIn {\r\n    0% {\r\n        opacity: 0;\r\n    }\r\n    100% {\r\n        opacity: 1;\r\n    }\r\n}\r\n",
+        "wrap": true
+      },
+      "pluginVersion": "5.2.0",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "status",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "data_vencimento",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "pagamento_valor",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "valor_aberto",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "id_cliente",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "tipo_recebimento",
+              "text": "",
+              "type": "string"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_API-IXC}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "$.registros",
+          "source": "url",
+          "type": "json",
+          "url": "https://${host}/webservice/v1/fn_areceber",
+          "url_options": {
+            "body_content_type": "application/json",
+            "body_type": "raw",
+            "data": "{\r\n  \"qtype\": \"fn_areceber.data_vencimento\",\r\n  \"query\": \"$data_financeiro\",\r\n  \"oper\": \"L\",\r\n  \"page\": \"1\",\r\n  \"rp\": \"100000\",\r\n  \"sortname\": \"fn_areceber.id\",\r\n  \"sortorder\": \"desc\"\r\n}",
+            "headers": [
+              {
+                "key": "ixcsoft",
+                "value": "listar"
+              }
+            ],
+            "method": "POST",
+            "params": []
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_API-IXC}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "#EAB839",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 16,
+        "y": 6
+      },
+      "id": 40,
+      "options": {
+        "afterRender": "",
+        "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<body>\r\n  <div class=\"widget\">\r\n    <div class=\"icon\"></div>\r\n    <div class=\"info\">\r\n      <p class=\"number\">{{valorTotalRecebidos}}</p>\r\n      <p class=\"label\">BOLETO</p>\r\n    </div>\r\n    <div class=\"chart\"></div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "defaultContent": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<body>\r\n  <div class=\"widget\">\r\n    <div class=\"icon\"></div>\r\n    <div class=\"info\">\r\n      <p class=\"number\">{{valorTotalRecebidos}}</p>\r\n      <p class=\"label\">BOLETO</p>\r\n    </div>\r\n    <div class=\"chart\"></div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles",
+          "helpers",
+          "default"
+        ],
+        "externalStyles": [],
+        "helpers": "let financeiro_status = [];\r\nlet financeiro_data_vencimento = [];\r\nlet financeiro_pagamento_valor = [];\r\nlet financeiro_tipo_recebimento = [];\r\n\r\n// Coletando os dados necessários\r\ncontext.panelData.series.forEach((s) => {\r\n  const statusField = s.fields.find((f) => f.name === 'status');\r\n  const dataVencimentoField = s.fields.find((f) => f.name === 'data_vencimento');\r\n  const pagamentoValorField = s.fields.find((f) => f.name === 'pagamento_valor');\r\n  const tipoRecebimentoField = s.fields.find((f) => f.name === 'tipo_recebimento');\r\n\r\n  if (statusField) financeiro_status = statusField.values.toArray();\r\n  if (dataVencimentoField) financeiro_data_vencimento = dataVencimentoField.values.toArray();\r\n  if (pagamentoValorField) financeiro_pagamento_valor = pagamentoValorField.values.toArray();\r\n  if (tipoRecebimentoField) financeiro_tipo_recebimento = tipoRecebimentoField.values.toArray();\r\n});\r\n\r\n// Função para converter o valor recebido para número\r\nfunction converterValor(valorString) {\r\n  return parseFloat(valorString.replace(',', '.')) || 0;\r\n}\r\n\r\n// Função para formatar o valor como BRL (R$)\r\nfunction formatarValor(valor) {\r\n  return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });\r\n}\r\n\r\n// Somando o total de valores recebidos do tipo \"Pix\" considerando apenas o status \"R\"\r\nconst totalRecebidosPix = financeiro_pagamento_valor.reduce((acc, valor, index) => {\r\n  if (financeiro_status[index] === 'R' && financeiro_tipo_recebimento[index] === 'Boleto') {  // Considera apenas status \"R\" e tipo \"Pix\"\r\n    const valorConvertido = converterValor(valor);\r\n    if (!isNaN(valorConvertido)) {\r\n      acc += valorConvertido;\r\n    }\r\n  }\r\n  return acc;\r\n}, 0);\r\n\r\n// Registrando o valor total como um helper do Handlebars\r\ncontext.handlebars.registerHelper('valorTotalRecebidos', () => formatarValor(totalRecebidosPix));\r\n\r\n// Retornando o valor total formatado\r\nreturn context.handlebars.helpers.valorTotalRecebidos();\r\n",
+        "renderMode": "allRows",
+        "styles": "body {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 100vh;\r\n    background-color: #f0f4f8;\r\n    margin: 0;\r\n}\r\n\r\n.widget {\r\n    //background-image: url('https://static.wixstatic.com/media/c319a6_92c6435731c24c5bbad16b32bad769a4~mv2.webp');\r\n    background-color: #134B70;\r\n    background-size: cover;\r\n    background-position: center;\r\n    border-radius: 20px;\r\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);\r\n    padding: 30px 18px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    cursor: pointer;\r\n    transition: all 0.3s ease;\r\n    animation: fadeIn 2s ease-in-out;\r\n}\r\n\r\n.widget:hover {\r\n    filter: brightness(0.8);\r\n}\r\n\r\n.widget .icon {\r\n    width: 65px;\r\n    height: 65px;\r\n    background-image: url('https://logodownload.org/wp-content/uploads/2019/09/boleto-logo-0.png');\r\n    background-size: cover;\r\n}\r\n\r\n.widget .info {\r\n    text-align: right;\r\n}\r\n\r\n.widget .info .number {\r\n    font-size: 22px;\r\n    font-weight: bold;\r\n    color: #fff;\r\n    margin: 0;\r\n}\r\n\r\n.widget .info .label {\r\n    background-color: transparent;\r\n    color: #fff;\r\n    font-size: 16px;\r\n    font-weight: lighter;\r\n    margin: 0;\r\n}\r\n\r\n.widget .chart {\r\n    position: absolute;\r\n    top: 20px;\r\n    right: 20px;\r\n}\r\n\r\n@keyframes fadeIn {\r\n    0% {\r\n        opacity: 0;\r\n    }\r\n    100% {\r\n        opacity: 1;\r\n    }\r\n}\r\n",
+        "wrap": true
+      },
+      "pluginVersion": "5.2.0",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "status",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "data_vencimento",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "pagamento_valor",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "valor_aberto",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "id_cliente",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "tipo_recebimento",
+              "text": "",
+              "type": "string"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_API-IXC}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "$.registros",
+          "source": "url",
+          "type": "json",
+          "url": "https://${host}/webservice/v1/fn_areceber",
+          "url_options": {
+            "body_content_type": "application/json",
+            "body_type": "raw",
+            "data": "{\r\n  \"qtype\": \"fn_areceber.data_vencimento\",\r\n  \"query\": \"$data_financeiro\",\r\n  \"oper\": \"L\",\r\n  \"page\": \"1\",\r\n  \"rp\": \"100000\",\r\n  \"sortname\": \"fn_areceber.id\",\r\n  \"sortorder\": \"desc\"\r\n}",
+            "headers": [
+              {
+                "key": "ixcsoft",
+                "value": "listar"
+              }
+            ],
+            "method": "POST",
+            "params": []
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_API-IXC}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "#EAB839",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 20,
+        "y": 6
+      },
+      "id": 41,
+      "options": {
+        "afterRender": "",
+        "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<body>\r\n  <div class=\"widget\">\r\n    <div class=\"icon\"></div>\r\n    <div class=\"info\">\r\n      <p class=\"number\">{{valorTotalRecebidos}}</p>\r\n      <p class=\"label\">DINHEIRO</p>\r\n    </div>\r\n    <div class=\"chart\"></div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "defaultContent": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<body>\r\n  <div class=\"widget\">\r\n    <div class=\"icon\"></div>\r\n    <div class=\"info\">\r\n      <p class=\"number\">{{valorTotalRecebidos}}</p>\r\n      <p class=\"label\">DINHEIRO</p>\r\n    </div>\r\n    <div class=\"chart\"></div>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles",
+          "helpers",
+          "default"
+        ],
+        "externalStyles": [],
+        "helpers": "let financeiro_status = [];\r\nlet financeiro_data_vencimento = [];\r\nlet financeiro_pagamento_valor = [];\r\nlet financeiro_tipo_recebimento = [];\r\n\r\n// Coletando os dados necessários\r\ncontext.panelData.series.forEach((s) => {\r\n  const statusField = s.fields.find((f) => f.name === 'status');\r\n  const dataVencimentoField = s.fields.find((f) => f.name === 'data_vencimento');\r\n  const pagamentoValorField = s.fields.find((f) => f.name === 'pagamento_valor');\r\n  const tipoRecebimentoField = s.fields.find((f) => f.name === 'tipo_recebimento');\r\n\r\n  if (statusField) financeiro_status = statusField.values.toArray();\r\n  if (dataVencimentoField) financeiro_data_vencimento = dataVencimentoField.values.toArray();\r\n  if (pagamentoValorField) financeiro_pagamento_valor = pagamentoValorField.values.toArray();\r\n  if (tipoRecebimentoField) financeiro_tipo_recebimento = tipoRecebimentoField.values.toArray();\r\n});\r\n\r\n// Função para converter o valor recebido para número\r\nfunction converterValor(valorString) {\r\n  return parseFloat(valorString.replace(',', '.')) || 0;\r\n}\r\n\r\n// Função para formatar o valor como BRL (R$)\r\nfunction formatarValor(valor) {\r\n  return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });\r\n}\r\n\r\n// Somando o total de valores recebidos do tipo \"Pix\" considerando apenas o status \"R\"\r\nconst totalRecebidosPix = financeiro_pagamento_valor.reduce((acc, valor, index) => {\r\n  if (financeiro_status[index] === 'R' && financeiro_tipo_recebimento[index] === 'Dinheiro') {  // Considera apenas status \"R\" e tipo \"Pix\"\r\n    const valorConvertido = converterValor(valor);\r\n    if (!isNaN(valorConvertido)) {\r\n      acc += valorConvertido;\r\n    }\r\n  }\r\n  return acc;\r\n}, 0);\r\n\r\n// Registrando o valor total como um helper do Handlebars\r\ncontext.handlebars.registerHelper('valorTotalRecebidos', () => formatarValor(totalRecebidosPix));\r\n\r\n// Retornando o valor total formatado\r\nreturn context.handlebars.helpers.valorTotalRecebidos();\r\n",
+        "renderMode": "allRows",
+        "styles": "body {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 100vh;\r\n    background-color: #f0f4f8;\r\n    margin: 0;\r\n}\r\n\r\n.widget {\r\n    //background-image: url('https://static.wixstatic.com/media/c319a6_92c6435731c24c5bbad16b32bad769a4~mv2.webp');\r\n    background-color: #134B70;\r\n    background-size: cover;\r\n    background-position: center;\r\n    border-radius: 20px;\r\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);\r\n    padding: 30px 18px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    cursor: pointer;\r\n    transition: all 0.3s ease;\r\n    animation: fadeIn 2s ease-in-out;\r\n}\r\n\r\n.widget:hover {\r\n    filter: brightness(0.8);\r\n}\r\n\r\n.widget .icon {\r\n    width: 65px;\r\n    height: 65px;\r\n    background-image: url('https://img.icons8.com/?size=100&id=13008&format=png&color=000000');\r\n    background-size: cover;\r\n}\r\n\r\n.widget .info {\r\n    text-align: right;\r\n}\r\n\r\n.widget .info .number {\r\n    font-size: 22px;\r\n    font-weight: bold;\r\n    color: #fff;\r\n    margin: 0;\r\n}\r\n\r\n.widget .info .label {\r\n    background-color: transparent;\r\n    color: #fff;\r\n    font-size: 16px;\r\n    font-weight: lighter;\r\n    margin: 0;\r\n}\r\n\r\n.widget .chart {\r\n    position: absolute;\r\n    top: 20px;\r\n    right: 20px;\r\n}\r\n\r\n@keyframes fadeIn {\r\n    0% {\r\n        opacity: 0;\r\n    }\r\n    100% {\r\n        opacity: 1;\r\n    }\r\n}\r\n",
+        "wrap": true
+      },
+      "pluginVersion": "5.2.0",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "status",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "data_vencimento",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "pagamento_valor",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "valor_aberto",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "id_cliente",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "tipo_recebimento",
+              "text": "",
+              "type": "string"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_API-IXC}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "$.registros",
+          "source": "url",
+          "type": "json",
+          "url": "https://${host}/webservice/v1/fn_areceber",
+          "url_options": {
+            "body_content_type": "application/json",
+            "body_type": "raw",
+            "data": "{\r\n  \"qtype\": \"fn_areceber.data_vencimento\",\r\n  \"query\": \"$data_financeiro\",\r\n  \"oper\": \"L\",\r\n  \"page\": \"1\",\r\n  \"rp\": \"100000\",\r\n  \"sortname\": \"fn_areceber.id\",\r\n  \"sortorder\": \"desc\"\r\n}",
+            "headers": [
+              {
+                "key": "ixcsoft",
+                "value": "listar"
+              }
+            ],
+            "method": "POST",
+            "params": []
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_API-IXC}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "#EAB839",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 19,
+        "w": 6,
+        "x": 0,
+        "y": 10
+      },
+      "id": 30,
+      "options": {
+        "afterRender": "",
+        "content": "{{generateTable}}",
+        "defaultContent": "The query didn't return any results.",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles",
+          "helpers"
+        ],
+        "externalStyles": [],
+        "helpers": "let financeiro_status = [];\r\nlet financeiro_data_vencimento = [];\r\nlet financeiro_pagamento_valor = [];\r\nlet financeiro_valor_aberto = [];\r\n\r\n// Coletando os dados necessários\r\ncontext.panelData.series.forEach((s) => {\r\n  const statusField = s.fields.find((f) => f.name === 'status');\r\n  const dataVencimentoField = s.fields.find((f) => f.name === 'data_vencimento');\r\n  const pagamentoValorField = s.fields.find((f) => f.name === 'pagamento_valor');\r\n  const valorAbertoField = s.fields.find((f) => f.name === 'valor_aberto');\r\n\r\n  if (statusField) financeiro_status = statusField.values.toArray();\r\n  if (dataVencimentoField) financeiro_data_vencimento = dataVencimentoField.values.toArray();\r\n  if (pagamentoValorField) financeiro_pagamento_valor = pagamentoValorField.values.toArray();\r\n  if (valorAbertoField) financeiro_valor_aberto = valorAbertoField.values.toArray();\r\n});\r\n\r\n// Função para formatar a data sem a hora\r\nfunction formatarData(dataString) {\r\n  return dataString.split(' ')[0];\r\n}\r\n\r\n// Função para converter o valor para número\r\nfunction converterValor(valorString) {\r\n  return parseFloat(valorString.replace(',', '.')) || 0;\r\n}\r\n\r\n// Função para formatar o valor como BRL (R$)\r\nfunction formatarValor(valor) {\r\n  return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });\r\n}\r\n\r\n// Agrupando os valores recebidos e a receber por data\r\nconst recebidosPorData = {};\r\nconst aReceberPorData = {};\r\n\r\nfinanceiro_data_vencimento.forEach((data, index) => {\r\n  const dataFormatada = formatarData(data);\r\n  const valorRecebido = converterValor(financeiro_pagamento_valor[index]);\r\n  const valorAberto = converterValor(financeiro_valor_aberto[index]);\r\n  const status = financeiro_status[index];\r\n\r\n  if (status === 'R') {  // Recebido\r\n    if (recebidosPorData[dataFormatada]) {\r\n      recebidosPorData[dataFormatada] += valorRecebido;\r\n    } else {\r\n      recebidosPorData[dataFormatada] = valorRecebido;\r\n    }\r\n  } else if (status === 'A') {  // A Receber\r\n    if (aReceberPorData[dataFormatada]) {\r\n      aReceberPorData[dataFormatada] += valorAberto;\r\n    } else {\r\n      aReceberPorData[dataFormatada] = valorAberto;\r\n    }\r\n  }\r\n});\r\n\r\n// Ordenando as datas em ordem crescente\r\nconst datasOrdenadas = Object.keys({ ...recebidosPorData, ...aReceberPorData }).sort((a, b) => new Date(a) - new Date(b));\r\n\r\n// Criando a tabela de recebidos e a receber por data com estilo CSS\r\ncontext.handlebars.registerHelper('generateTable', () => {\r\n  let tableHtml = `\r\n    <table class=\"custom-table\">\r\n      <thead>\r\n        <tr>\r\n          <th class=\"custom-header\">DATA</th>\r\n          <th class=\"custom-header\">RECEBIDOS</th>\r\n          <th class=\"custom-header\">A RECEBER</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n  `;\r\n\r\n  datasOrdenadas.forEach(data => {\r\n    tableHtml += `\r\n      <tr class=\"custom-row\">\r\n        <td class=\"custom-cell\">${data}</td>\r\n        <td class=\"custom-cell\">${formatarValor(recebidosPorData[data] || 0)}</td>\r\n        <td class=\"custom-cell\">${formatarValor(aReceberPorData[data] || 0)}</td>\r\n      </tr>\r\n    `;\r\n  });\r\n\r\n  tableHtml += `\r\n      </tbody>\r\n    </table>\r\n  `;\r\n\r\n  return new context.handlebars.SafeString(tableHtml);\r\n});\r\n\r\nreturn context.handlebars.helpers.generateTable();\r\n",
+        "renderMode": "allRows",
+        "styles": ".custom-table {\r\n  width: 100%;\r\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\r\n  margin-top: 10px;\r\n  background-color: transparent; /* Fundo da tabela transparente */\r\n}\r\n\r\n.custom-header {\r\n  background-color: transparent; /* Cor escura para o cabeçalho */\r\n  color: #FFFFFF;\r\n  font-weight: bold;\r\n  padding: 10px; /* Reduzindo o padding */\r\n  text-align: left;\r\n  text-transform: uppercase; /* Letras maiúsculas no cabeçalho */\r\n}\r\n\r\n.custom-row {\r\n  color: #ECF0F1;\r\n}\r\n\r\n.custom-row:nth-child(even) {\r\n  background-color: transparent; /* Cor transparente para as linhas pares */\r\n}\r\n\r\n.custom-row:nth-child(odd) {\r\n  background-color: transparent; /* Cor transparente para as linhas ímpares */\r\n}\r\n\r\n.custom-row:hover {\r\n  background-color: #34495E; /* Cor de fundo ao passar o mouse */\r\n}\r\n\r\n.custom-cell {\r\n  padding: 10px; /* Reduzindo o padding */\r\n  border-bottom: 1px solid rgba(236, 240, 241, 0.1); /* Linha de separação mais sutil entre as células */\r\n  text-align: left;\r\n}\r\n@media (max-width: 768px) {\r\n  .custom-cell {\r\n    font-size: 12px;\r\n    padding: 8px; /* Reduzindo o padding para dispositivos móveis */\r\n  }\r\n}\r\n",
+        "wrap": false
+      },
+      "pluginVersion": "5.2.0",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "status",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "data_vencimento",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "pagamento_valor",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "valor_aberto",
+              "text": "",
+              "type": "string"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_API-IXC}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "$.registros",
+          "source": "url",
+          "type": "json",
+          "url": "https://${host}/webservice/v1/fn_areceber",
+          "url_options": {
+            "body_content_type": "application/json",
+            "body_type": "raw",
+            "data": "{\r\n  \"qtype\": \"fn_areceber.data_vencimento\",\r\n  \"query\": \"$data_financeiro\",\r\n  \"oper\": \"L\",\r\n  \"page\": \"1\",\r\n  \"rp\": \"100000\",\r\n  \"sortname\": \"fn_areceber.id\",\r\n  \"sortorder\": \"desc\"\r\n}",
+            "headers": [
+              {
+                "key": "ixcsoft",
+                "value": "listar"
+              }
+            ],
+            "method": "POST",
+            "params": []
+          }
+        }
+      ],
+      "title": "GESTAO DE VENCIMENTOS",
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_API-IXC}"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 10,
+        "w": 11,
+        "x": 6,
+        "y": 10
+      },
+      "id": 37,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "code",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "let financeiro_status = [];\nlet financeiro_data_vencimento = [];\nlet financeiro_pagamento_valor = [];\nlet financeiro_tipo_recebimento = [];\n\n// Coletando os dados necessários\ncontext.panel.data.series.forEach((s) => {\n  const statusField = s.fields.find((f) => f.name === 'status');\n  const dataVencimentoField = s.fields.find((f) => f.name === 'data_vencimento');\n  const pagamentoValorField = s.fields.find((f) => f.name === 'pagamento_valor');\n  const tipoRecebimentoField = s.fields.find((f) => f.name === 'tipo_recebimento');\n\n  if (statusField) financeiro_status = statusField.values.toArray();\n  if (dataVencimentoField) financeiro_data_vencimento = dataVencimentoField.values.toArray();\n  if (pagamentoValorField) financeiro_pagamento_valor = pagamentoValorField.values.toArray();\n  if (tipoRecebimentoField) financeiro_tipo_recebimento = tipoRecebimentoField.values.toArray();\n});\n\n// Função para formatar a data para \"YYYY-MM\"\nfunction formatarMesAno(dataString) {\n  const [ano, mes] = dataString.split(' ')[0].split('-');\n  return `${ano}-${mes}`;\n}\n\n// Função para converter o valor recebido para número\nfunction converterValor(valorString) {\n  return parseFloat(valorString.replace(',', '.')) || 0;\n}\n\n// Determinar a cor com base no tema\nconst themeColor = context.grafana.theme.name === 'Light' ? '#000' : '#FFF';\n\n// Inicializando os tipos de recebimento\nconst tiposRecebimento = [\n  'Boleto', 'Dinheiro', 'Gateway', 'Pix'\n];\n\n// Agrupando os valores recebidos por mês e por tipo de recebimento considerando apenas o status \"R\"\nconst recebidosPorMesETipo = financeiro_data_vencimento.reduce((acc, data, index) => {\n  if (financeiro_status[index] === 'R') {  // Considera apenas status \"R\"\n    const mesAno = formatarMesAno(data);\n    const tipoRecebimento = financeiro_tipo_recebimento[index];\n    const valor = converterValor(financeiro_pagamento_valor[index]);\n\n    if (!isNaN(valor)) {\n      if (!acc[mesAno]) {\n        acc[mesAno] = tiposRecebimento.reduce((obj, tipo) => {\n          obj[tipo] = 0;\n          return obj;\n        }, {});\n      }\n      if (acc[mesAno][tipoRecebimento] !== undefined) {\n        acc[mesAno][tipoRecebimento] += valor;\n      }\n    }\n  }\n  return acc;\n}, {});\n\n// Ordenando os meses em ordem crescente\nconst mesesOrdenados = Object.keys(recebidosPorMesETipo).sort((a, b) => new Date(a + \"-01\") - new Date(b + \"-01\"));\nconst valoresPorTipo = tiposRecebimento.reduce((acc, tipo) => {\n  acc[tipo] = mesesOrdenados.map(mes => recebidosPorMesETipo[mes][tipo]);\n  return acc;\n}, {});\n\n// Paleta de cores personalizada\nconst paletaCores = [\n  \"#001449\",\n  \"#012677\",\n  \"#005BC5\",\n  \"#00B4FC\",\n  \"#17F9FF\"\n];\n\n\n\n// Configuração do gráfico de barras empilhadas com Apache ECharts\nreturn {\n  grid: {\n    left: '2%',\n    right: '2%',\n    bottom: '2%',\n    containLabel: true\n  },\n  xAxis: {\n    type: 'category',\n    data: mesesOrdenados,\n    axisLine: { show: true },\n    axisTick: { show: false },\n    splitLine: { show: false }\n  },\n  yAxis: {\n    type: 'value',\n    axisLine: { show: true },\n    axisTick: { show: true },\n    splitLine: { show: false },\n    axisLabel: {\n      formatter: function (value) {\n        return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 2 });\n      }\n    }\n  },\n  series: tiposRecebimento.map((tipo, index) => ({\n    name: tipo,\n    data: valoresPorTipo[tipo],\n    type: 'bar',\n    stack: 'total',\n    itemStyle: {\n      color: paletaCores[index % paletaCores.length],\n    },\n    label: {\n      show: false,\n      //show: valoresPorTipo[tipo].some(val => val > 0),\n      position: 'inside',\n      color: themeColor,\n      formatter: function (params) {\n        return params.value > 10000 ? params.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) : '';\n      }\n    }\n  })),\n  toolbox: {\n    show: true,\n    feature: {\n      mark: { show: true },\n      dataView: { show: false, readOnly: false },\n      restore: { show: true },\n      saveAsImage: { show: true }\n    }\n  },\n  tooltip: {\n    trigger: 'axis',\n    axisPointer: {\n      type: 'shadow'\n    },\n    formatter: function (params) {\n      const linhas = params.map(param => {\n        const valor = param.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 2 });\n        return `${param.marker} ${param.seriesName}: ${valor}`;\n      });\n      return `${params[0].name}<br/>${linhas.join('<br/>')}`;\n    }\n  },\n  legend: {\n    top: '2%',\n    data: tiposRecebimento,\n    textStyle: {\n      color: themeColor\n    }\n  }\n};\n",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "svg",
+        "themeEditor": {
+          "config": "{\r\n  \"color\": [\r\n    \"#001449\",\r\n    \"#012677\",\r\n    \"#005BC5\",\r\n    \"#00B4FC\",\r\n    \"#17F9FF\"\r\n  ],\r\n  \"backgroundColor\": \"rgba(252,252,252,0)\",\r\n  \"textStyle\": {},\r\n  \"title\": {\r\n    \"textStyle\": {\r\n      \"color\": \"#666666\"\r\n    },\r\n    \"subtextStyle\": {\r\n      \"color\": \"#999999\"\r\n    }\r\n  },\r\n  \"line\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": \"2\"\r\n    },\r\n    \"lineStyle\": {\r\n      \"width\": \"3\"\r\n    },\r\n    \"symbolSize\": \"8\",\r\n    \"symbol\": \"emptyCircle\",\r\n    \"smooth\": false\r\n  },\r\n  \"radar\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": \"2\"\r\n    },\r\n    \"lineStyle\": {\r\n      \"width\": \"3\"\r\n    },\r\n    \"symbolSize\": \"8\",\r\n    \"symbol\": \"emptyCircle\",\r\n    \"smooth\": false\r\n  },\r\n  \"bar\": {\r\n    \"itemStyle\": {\r\n      \"barBorderWidth\": 0,\r\n      \"barBorderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"pie\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"scatter\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"boxplot\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"parallel\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"sankey\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"funnel\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"gauge\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"candlestick\": {\r\n    \"itemStyle\": {\r\n      \"color\": \"#e6a0d2\",\r\n      \"color0\": \"transparent\",\r\n      \"borderColor\": \"#e6a0d2\",\r\n      \"borderColor0\": \"#3fb1e3\",\r\n      \"borderWidth\": \"2\"\r\n    }\r\n  },\r\n  \"graph\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    },\r\n    \"lineStyle\": {\r\n      \"width\": \"1\",\r\n      \"color\": \"#cccccc\"\r\n    },\r\n    \"symbolSize\": \"8\",\r\n    \"symbol\": \"emptyCircle\",\r\n    \"smooth\": false,\r\n    \"color\": [\r\n      \"#001449\",\r\n      \"#012677\",\r\n      \"#005BC5\",\r\n      \"#00B4FC\",\r\n      \"#17F9FF\"\r\n    ],\r\n    \"label\": {\r\n      \"color\": \"#ffffff\"\r\n    }\r\n  },\r\n  \"map\": {\r\n    \"itemStyle\": {\r\n      \"areaColor\": \"#eeeeee\",\r\n      \"borderColor\": \"#aaaaaa\",\r\n      \"borderWidth\": 0.5\r\n    },\r\n    \"label\": {\r\n      \"color\": \"#ffffff\"\r\n    },\r\n    \"emphasis\": {\r\n      \"itemStyle\": {\r\n        \"areaColor\": \"rgba(63,177,227,0.25)\",\r\n        \"borderColor\": \"#3fb1e3\",\r\n        \"borderWidth\": 1\r\n      },\r\n      \"label\": {\r\n        \"color\": \"#3fb1e3\"\r\n      }\r\n    }\r\n  },\r\n  \"geo\": {\r\n    \"itemStyle\": {\r\n      \"areaColor\": \"#eeeeee\",\r\n      \"borderColor\": \"#aaaaaa\",\r\n      \"borderWidth\": 0.5\r\n    },\r\n    \"label\": {\r\n      \"color\": \"#ffffff\"\r\n    },\r\n    \"emphasis\": {\r\n      \"itemStyle\": {\r\n        \"areaColor\": \"rgba(63,177,227,0.25)\",\r\n        \"borderColor\": \"#3fb1e3\",\r\n        \"borderWidth\": 1\r\n      },\r\n      \"label\": {\r\n        \"color\": \"#3fb1e3\"\r\n      }\r\n    }\r\n  },\r\n  \"categoryAxis\": {\r\n    \"axisLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\"\r\n      }\r\n    },\r\n    \"axisTick\": {\r\n      \"show\": false,\r\n      \"lineStyle\": {\r\n        \"color\": \"#333\"\r\n      }\r\n    },\r\n    \"axisLabel\": {\r\n      \"show\": true,\r\n      \"color\": \"#999999\"\r\n    },\r\n    \"splitLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": [\r\n          \"#eeeeee\"\r\n        ]\r\n      }\r\n    },\r\n    \"splitArea\": {\r\n      \"show\": false,\r\n      \"areaStyle\": {\r\n        \"color\": [\r\n          \"rgba(250,250,250,0.05)\",\r\n          \"rgba(200,200,200,0.02)\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"valueAxis\": {\r\n    \"axisLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\"\r\n      }\r\n    },\r\n    \"axisTick\": {\r\n      \"show\": false,\r\n      \"lineStyle\": {\r\n        \"color\": \"#333\"\r\n      }\r\n    },\r\n    \"axisLabel\": {\r\n      \"show\": true,\r\n      \"color\": \"#999999\"\r\n    },\r\n    \"splitLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": [\r\n          \"#eeeeee\"\r\n        ]\r\n      }\r\n    },\r\n    \"splitArea\": {\r\n      \"show\": false,\r\n      \"areaStyle\": {\r\n        \"color\": [\r\n          \"rgba(250,250,250,0.05)\",\r\n          \"rgba(200,200,200,0.02)\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"logAxis\": {\r\n    \"axisLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\"\r\n      }\r\n    },\r\n    \"axisTick\": {\r\n      \"show\": false,\r\n      \"lineStyle\": {\r\n        \"color\": \"#333\"\r\n      }\r\n    },\r\n    \"axisLabel\": {\r\n      \"show\": true,\r\n      \"color\": \"#999999\"\r\n    },\r\n    \"splitLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": [\r\n          \"#eeeeee\"\r\n        ]\r\n      }\r\n    },\r\n    \"splitArea\": {\r\n      \"show\": false,\r\n      \"areaStyle\": {\r\n        \"color\": [\r\n          \"rgba(250,250,250,0.05)\",\r\n          \"rgba(200,200,200,0.02)\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"timeAxis\": {\r\n    \"axisLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\"\r\n      }\r\n    },\r\n    \"axisTick\": {\r\n      \"show\": false,\r\n      \"lineStyle\": {\r\n        \"color\": \"#333\"\r\n      }\r\n    },\r\n    \"axisLabel\": {\r\n      \"show\": true,\r\n      \"color\": \"#999999\"\r\n    },\r\n    \"splitLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": [\r\n          \"#eeeeee\"\r\n        ]\r\n      }\r\n    },\r\n    \"splitArea\": {\r\n      \"show\": false,\r\n      \"areaStyle\": {\r\n        \"color\": [\r\n          \"rgba(250,250,250,0.05)\",\r\n          \"rgba(200,200,200,0.02)\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"toolbox\": {\r\n    \"iconStyle\": {\r\n      \"borderColor\": \"#999999\"\r\n    },\r\n    \"emphasis\": {\r\n      \"iconStyle\": {\r\n        \"borderColor\": \"#666666\"\r\n      }\r\n    }\r\n  },\r\n  \"legend\": {\r\n    \"textStyle\": {\r\n      \"color\": \"#999999\"\r\n    }\r\n  },\r\n  \"tooltip\": {\r\n    \"axisPointer\": {\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\",\r\n        \"width\": 1\r\n      },\r\n      \"crossStyle\": {\r\n        \"color\": \"#cccccc\",\r\n        \"width\": 1\r\n      }\r\n    }\r\n  },\r\n  \"timeline\": {\r\n    \"lineStyle\": {\r\n      \"color\": \"#626c91\",\r\n      \"width\": 1\r\n    },\r\n    \"itemStyle\": {\r\n      \"color\": \"#626c91\",\r\n      \"borderWidth\": 1\r\n    },\r\n    \"controlStyle\": {\r\n      \"color\": \"#626c91\",\r\n      \"borderColor\": \"#626c91\",\r\n      \"borderWidth\": 0.5\r\n    },\r\n    \"checkpointStyle\": {\r\n      \"color\": \"#3fb1e3\",\r\n      \"borderColor\": \"#3fb1e3\"\r\n    },\r\n    \"label\": {\r\n      \"color\": \"#626c91\"\r\n    },\r\n    \"emphasis\": {\r\n      \"itemStyle\": {\r\n        \"color\": \"#626c91\"\r\n      },\r\n      \"controlStyle\": {\r\n        \"color\": \"#626c91\",\r\n        \"borderColor\": \"#626c91\",\r\n        \"borderWidth\": 0.5\r\n      },\r\n      \"label\": {\r\n        \"color\": \"#626c91\"\r\n      }\r\n    }\r\n  },\r\n  \"visualMap\": {\r\n    \"color\": [\r\n      \"#2a99c9\",\r\n      \"#afe8ff\"\r\n    ]\r\n  },\r\n  \"dataZoom\": {\r\n    \"backgroundColor\": \"rgba(255,255,255,0)\",\r\n    \"dataBackgroundColor\": \"rgba(222,222,222,1)\",\r\n    \"fillerColor\": \"rgba(114,230,212,0.25)\",\r\n    \"handleColor\": \"#cccccc\",\r\n    \"handleSize\": \"100%\",\r\n    \"textStyle\": {\r\n      \"color\": \"#999999\"\r\n    }\r\n  },\r\n  \"markPoint\": {\r\n    \"label\": {\r\n      \"color\": \"#ffffff\"\r\n    },\r\n    \"emphasis\": {\r\n      \"label\": {\r\n        \"color\": \"#ffffff\"\r\n      }\r\n    }\r\n  }\r\n}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "return {\n  dataset: context.editor.dataset,\n  series: context.editor.series,\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n}\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.1.0",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "status",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "data_vencimento",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "pagamento_valor",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "valor_aberto",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "id_cliente",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "tipo_recebimento",
+              "text": "",
+              "type": "string"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_API-IXC}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "$.registros",
+          "source": "url",
+          "type": "json",
+          "url": "https://${host}/webservice/v1/fn_areceber",
+          "url_options": {
+            "body_content_type": "application/json",
+            "body_type": "raw",
+            "data": "{\r\n  \"qtype\": \"fn_areceber.data_vencimento\",\r\n  \"query\": \"2024\",\r\n  \"oper\": \"L\",\r\n  \"page\": \"1\",\r\n  \"rp\": \"100000\",\r\n  \"sortname\": \"fn_areceber.id\",\r\n  \"sortorder\": \"desc\"\r\n}",
+            "headers": [
+              {
+                "key": "ixcsoft",
+                "value": "listar"
+              }
+            ],
+            "method": "POST",
+            "params": []
+          }
+        }
+      ],
+      "title": "GESTAO DE RECEBIMENTOS POR TIPO 2024",
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_API-IXC}"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 10,
+        "w": 7,
+        "x": 17,
+        "y": 10
+      },
+      "id": 42,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "code",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "let financeiro_status = [];\nlet financeiro_pagamento_valor = [];\nlet financeiro_tipo_recebimento = [];\n\n// Coletando os dados necessários\ncontext.panel.data.series.forEach((s) => {\n  const statusField = s.fields.find((f) => f.name === 'status');\n  const pagamentoValorField = s.fields.find((f) => f.name === 'pagamento_valor');\n  const tipoRecebimentoField = s.fields.find((f) => f.name === 'tipo_recebimento');\n\n  if (statusField) financeiro_status = statusField.values.toArray();\n  if (pagamentoValorField) financeiro_pagamento_valor = pagamentoValorField.values.toArray();\n  if (tipoRecebimentoField) financeiro_tipo_recebimento = tipoRecebimentoField.values.toArray();\n});\n\n// Função para converter o valor recebido para número\nfunction converterValor(valorString) {\n  return parseFloat(valorString.replace(',', '.')) || 0;\n}\n\n// Função para abreviar os valores\nfunction abreviarValor(valor) {\n  if (valor >= 1e6) {\n    return (valor / 1e6).toFixed(1) + ' Milhão';\n  } else if (valor >= 1e3) {\n    return (valor / 1e3).toFixed(1) + ' Mil';\n  } else {\n    return valor.toFixed(2);\n  }\n}\n\n// Agrupando os valores recebidos por tipo de recebimento, considerando apenas o status \"R\"\nconst valoresPorTipo = financeiro_pagamento_valor.reduce((acc, valor, index) => {\n  if (financeiro_status[index] === 'R') {  // Considera apenas status \"R\"\n    const tipoRecebimento = financeiro_tipo_recebimento[index];\n    const valorConvertido = converterValor(valor);\n\n    if (!isNaN(valorConvertido)) {\n      acc[tipoRecebimento] = (acc[tipoRecebimento] || 0) + valorConvertido;\n    }\n  }\n  return acc;\n}, {});\n\n// Preparando os dados para o gráfico de pizza com valores formatados\nconst sortedData = Object.keys(valoresPorTipo).map(tipo => ({\n  name: tipo,\n  value: valoresPorTipo[tipo],\n  formattedValue: abreviarValor(valoresPorTipo[tipo])\n}));\nconst paletaCores = [\n  \"#001449\",\n  \"#012677\",\n  \"#005BC5\",\n  \"#00B4FC\",\n  \"#17F9FF\"\n];\n\n\n// Estilos do tema e tooltip\nconst themeColor = context.grafana.theme.name === 'Light' ? '#000' : '#FFF';\nconst tooltipBackgroundColor = context.grafana.theme.name === 'Light' ? '#000' : '#FFF';\n\n// Configuração do gráfico de pizza com Apache ECharts\nreturn {\n  title: {\n    show: false,\n    text: \"Recebimentos por Tipo\",\n    left: \"center\",\n    top: \"top\",\n    textStyle: {\n      color: themeColor\n    },\n  },\n  tooltip: {\n    trigger: 'item',\n    backgroundColor: tooltipBackgroundColor, // Cor de fundo do tooltip ajustada conforme o tema\n    textStyle: {\n      color: themeColor // Cor do texto ajustada conforme o tema\n    },\n    formatter: function (params) {\n      const item = sortedData.find(item => item.name === params.name);\n      return `<span style=\"color:#000\">${params.name}: ${item.formattedValue}</span>`;\n    }\n  },\n  legend: {\n    top: '2%',\n    left: 'center',\n    textStyle: {\n      color: themeColor\n    }\n  },\n  toolbox: {\n    show: true,\n    feature: {\n      mark: { show: true },\n      dataView: { show: false, readOnly: false },\n      restore: { show: true },\n      saveAsImage: { show: true }\n    }\n  },\n  series: [\n    {\n      name: 'Recebimentos',\n      type: 'pie',\n      radius: ['25%', '60%'],\n      center: ['50%', '50%'],\n      itemStyle: {\n        borderRadius: 0,\n        color: function (params) {\n          return paletaCores[params.dataIndex % paletaCores.length];\n        }\n      },\n      label: {\n        formatter: function (params) {\n          const item = sortedData.find(item => item.name === params.name);\n          return `${params.name}: ${item.formattedValue}`;\n        },\n        color: themeColor\n      },\n      data: sortedData.map(item => ({\n        name: item.name,\n        value: item.value,\n        formattedValue: item.formattedValue,\n      })),\n    }\n  ],\n};\n",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{\r\n  \"color\": [\r\n    \"#001449\",\r\n    \"#012677\",\r\n    \"#005BC5\",\r\n    \"#00B4FC\",\r\n    \"#17F9FF\"\r\n  ],\r\n  \"backgroundColor\": \"rgba(252,252,252,0)\",\r\n  \"textStyle\": {},\r\n  \"title\": {\r\n    \"textStyle\": {\r\n      \"color\": \"#666666\"\r\n    },\r\n    \"subtextStyle\": {\r\n      \"color\": \"#999999\"\r\n    }\r\n  },\r\n  \"line\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": \"2\"\r\n    },\r\n    \"lineStyle\": {\r\n      \"width\": \"3\"\r\n    },\r\n    \"symbolSize\": \"8\",\r\n    \"symbol\": \"emptyCircle\",\r\n    \"smooth\": false\r\n  },\r\n  \"radar\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": \"2\"\r\n    },\r\n    \"lineStyle\": {\r\n      \"width\": \"3\"\r\n    },\r\n    \"symbolSize\": \"8\",\r\n    \"symbol\": \"emptyCircle\",\r\n    \"smooth\": false\r\n  },\r\n  \"bar\": {\r\n    \"itemStyle\": {\r\n      \"barBorderWidth\": 0,\r\n      \"barBorderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"pie\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"scatter\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"boxplot\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"parallel\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"sankey\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"funnel\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"gauge\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"candlestick\": {\r\n    \"itemStyle\": {\r\n      \"color\": \"#e6a0d2\",\r\n      \"color0\": \"transparent\",\r\n      \"borderColor\": \"#e6a0d2\",\r\n      \"borderColor0\": \"#3fb1e3\",\r\n      \"borderWidth\": \"2\"\r\n    }\r\n  },\r\n  \"graph\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    },\r\n    \"lineStyle\": {\r\n      \"width\": \"1\",\r\n      \"color\": \"#cccccc\"\r\n    },\r\n    \"symbolSize\": \"8\",\r\n    \"symbol\": \"emptyCircle\",\r\n    \"smooth\": false,\r\n    \"color\": [\r\n      \"#001449\",\r\n      \"#012677\",\r\n      \"#005BC5\",\r\n      \"#00B4FC\",\r\n      \"#17F9FF\"\r\n    ],\r\n    \"label\": {\r\n      \"color\": \"#ffffff\"\r\n    }\r\n  },\r\n  \"map\": {\r\n    \"itemStyle\": {\r\n      \"areaColor\": \"#eeeeee\",\r\n      \"borderColor\": \"#aaaaaa\",\r\n      \"borderWidth\": 0.5\r\n    },\r\n    \"label\": {\r\n      \"color\": \"#ffffff\"\r\n    },\r\n    \"emphasis\": {\r\n      \"itemStyle\": {\r\n        \"areaColor\": \"rgba(63,177,227,0.25)\",\r\n        \"borderColor\": \"#3fb1e3\",\r\n        \"borderWidth\": 1\r\n      },\r\n      \"label\": {\r\n        \"color\": \"#3fb1e3\"\r\n      }\r\n    }\r\n  },\r\n  \"geo\": {\r\n    \"itemStyle\": {\r\n      \"areaColor\": \"#eeeeee\",\r\n      \"borderColor\": \"#aaaaaa\",\r\n      \"borderWidth\": 0.5\r\n    },\r\n    \"label\": {\r\n      \"color\": \"#ffffff\"\r\n    },\r\n    \"emphasis\": {\r\n      \"itemStyle\": {\r\n        \"areaColor\": \"rgba(63,177,227,0.25)\",\r\n        \"borderColor\": \"#3fb1e3\",\r\n        \"borderWidth\": 1\r\n      },\r\n      \"label\": {\r\n        \"color\": \"#3fb1e3\"\r\n      }\r\n    }\r\n  },\r\n  \"categoryAxis\": {\r\n    \"axisLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\"\r\n      }\r\n    },\r\n    \"axisTick\": {\r\n      \"show\": false,\r\n      \"lineStyle\": {\r\n        \"color\": \"#333\"\r\n      }\r\n    },\r\n    \"axisLabel\": {\r\n      \"show\": true,\r\n      \"color\": \"#999999\"\r\n    },\r\n    \"splitLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": [\r\n          \"#eeeeee\"\r\n        ]\r\n      }\r\n    },\r\n    \"splitArea\": {\r\n      \"show\": false,\r\n      \"areaStyle\": {\r\n        \"color\": [\r\n          \"rgba(250,250,250,0.05)\",\r\n          \"rgba(200,200,200,0.02)\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"valueAxis\": {\r\n    \"axisLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\"\r\n      }\r\n    },\r\n    \"axisTick\": {\r\n      \"show\": false,\r\n      \"lineStyle\": {\r\n        \"color\": \"#333\"\r\n      }\r\n    },\r\n    \"axisLabel\": {\r\n      \"show\": true,\r\n      \"color\": \"#999999\"\r\n    },\r\n    \"splitLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": [\r\n          \"#eeeeee\"\r\n        ]\r\n      }\r\n    },\r\n    \"splitArea\": {\r\n      \"show\": false,\r\n      \"areaStyle\": {\r\n        \"color\": [\r\n          \"rgba(250,250,250,0.05)\",\r\n          \"rgba(200,200,200,0.02)\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"logAxis\": {\r\n    \"axisLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\"\r\n      }\r\n    },\r\n    \"axisTick\": {\r\n      \"show\": false,\r\n      \"lineStyle\": {\r\n        \"color\": \"#333\"\r\n      }\r\n    },\r\n    \"axisLabel\": {\r\n      \"show\": true,\r\n      \"color\": \"#999999\"\r\n    },\r\n    \"splitLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": [\r\n          \"#eeeeee\"\r\n        ]\r\n      }\r\n    },\r\n    \"splitArea\": {\r\n      \"show\": false,\r\n      \"areaStyle\": {\r\n        \"color\": [\r\n          \"rgba(250,250,250,0.05)\",\r\n          \"rgba(200,200,200,0.02)\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"timeAxis\": {\r\n    \"axisLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\"\r\n      }\r\n    },\r\n    \"axisTick\": {\r\n      \"show\": false,\r\n      \"lineStyle\": {\r\n        \"color\": \"#333\"\r\n      }\r\n    },\r\n    \"axisLabel\": {\r\n      \"show\": true,\r\n      \"color\": \"#999999\"\r\n    },\r\n    \"splitLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": [\r\n          \"#eeeeee\"\r\n        ]\r\n      }\r\n    },\r\n    \"splitArea\": {\r\n      \"show\": false,\r\n      \"areaStyle\": {\r\n        \"color\": [\r\n          \"rgba(250,250,250,0.05)\",\r\n          \"rgba(200,200,200,0.02)\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"toolbox\": {\r\n    \"iconStyle\": {\r\n      \"borderColor\": \"#999999\"\r\n    },\r\n    \"emphasis\": {\r\n      \"iconStyle\": {\r\n        \"borderColor\": \"#666666\"\r\n      }\r\n    }\r\n  },\r\n  \"legend\": {\r\n    \"textStyle\": {\r\n      \"color\": \"#999999\"\r\n    }\r\n  },\r\n  \"tooltip\": {\r\n    \"axisPointer\": {\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\",\r\n        \"width\": 1\r\n      },\r\n      \"crossStyle\": {\r\n        \"color\": \"#cccccc\",\r\n        \"width\": 1\r\n      }\r\n    }\r\n  },\r\n  \"timeline\": {\r\n    \"lineStyle\": {\r\n      \"color\": \"#626c91\",\r\n      \"width\": 1\r\n    },\r\n    \"itemStyle\": {\r\n      \"color\": \"#626c91\",\r\n      \"borderWidth\": 1\r\n    },\r\n    \"controlStyle\": {\r\n      \"color\": \"#626c91\",\r\n      \"borderColor\": \"#626c91\",\r\n      \"borderWidth\": 0.5\r\n    },\r\n    \"checkpointStyle\": {\r\n      \"color\": \"#3fb1e3\",\r\n      \"borderColor\": \"#3fb1e3\"\r\n    },\r\n    \"label\": {\r\n      \"color\": \"#626c91\"\r\n    },\r\n    \"emphasis\": {\r\n      \"itemStyle\": {\r\n        \"color\": \"#626c91\"\r\n      },\r\n      \"controlStyle\": {\r\n        \"color\": \"#626c91\",\r\n        \"borderColor\": \"#626c91\",\r\n        \"borderWidth\": 0.5\r\n      },\r\n      \"label\": {\r\n        \"color\": \"#626c91\"\r\n      }\r\n    }\r\n  },\r\n  \"visualMap\": {\r\n    \"color\": [\r\n      \"#2a99c9\",\r\n      \"#afe8ff\"\r\n    ]\r\n  },\r\n  \"dataZoom\": {\r\n    \"backgroundColor\": \"rgba(255,255,255,0)\",\r\n    \"dataBackgroundColor\": \"rgba(222,222,222,1)\",\r\n    \"fillerColor\": \"rgba(114,230,212,0.25)\",\r\n    \"handleColor\": \"#cccccc\",\r\n    \"handleSize\": \"100%\",\r\n    \"textStyle\": {\r\n      \"color\": \"#999999\"\r\n    }\r\n  },\r\n  \"markPoint\": {\r\n    \"label\": {\r\n      \"color\": \"#ffffff\"\r\n    },\r\n    \"emphasis\": {\r\n      \"label\": {\r\n        \"color\": \"#ffffff\"\r\n      }\r\n    }\r\n  }\r\n}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "return {\n  dataset: context.editor.dataset,\n  series: context.editor.series,\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n}\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.1.0",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "status",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "data_vencimento",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "pagamento_valor",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "valor_aberto",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "id_cliente",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "tipo_recebimento",
+              "text": "",
+              "type": "string"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_API-IXC}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "$.registros",
+          "source": "url",
+          "type": "json",
+          "url": "https://${host}/webservice/v1/fn_areceber",
+          "url_options": {
+            "body_content_type": "application/json",
+            "body_type": "raw",
+            "data": "{\r\n  \"qtype\": \"fn_areceber.data_vencimento\",\r\n  \"query\": \"$data_financeiro\",\r\n  \"oper\": \"L\",\r\n  \"page\": \"1\",\r\n  \"rp\": \"100000\",\r\n  \"sortname\": \"fn_areceber.id\",\r\n  \"sortorder\": \"desc\"\r\n}",
+            "headers": [
+              {
+                "key": "ixcsoft",
+                "value": "listar"
+              }
+            ],
+            "method": "POST",
+            "params": []
+          }
+        }
+      ],
+      "title": "GESTAO DE RECEBIMENTOS POR TIPO $data_financeiro",
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_API-IXC}"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 9,
+        "w": 18,
+        "x": 6,
+        "y": 20
+      },
+      "id": 31,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto"
+        },
+        "editorMode": "code",
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "let financeiro_status = [];\nlet financeiro_data_vencimento = [];\nlet financeiro_pagamento_valor = [];\n\n// Coletando os dados necessários\ncontext.panel.data.series.forEach((s) => {\n  const statusField = s.fields.find((f) => f.name === 'status');\n  const dataVencimentoField = s.fields.find((f) => f.name === 'data_vencimento');\n  const pagamentoValorField = s.fields.find((f) => f.name === 'pagamento_valor');\n\n  if (statusField) financeiro_status = statusField.values.toArray();\n  if (dataVencimentoField) financeiro_data_vencimento = dataVencimentoField.values.toArray();\n  if (pagamentoValorField) financeiro_pagamento_valor = pagamentoValorField.values.toArray();\n});\n\n// Função para formatar a data para \"YYYY-MM\"\nfunction formatarMesAno(dataString) {\n  const [ano, mes] = dataString.split(' ')[0].split('-');\n  return `${ano}-${mes}`;\n}\n\n// Função para converter o valor recebido para número\nfunction converterValor(valorString) {\n  return parseFloat(valorString.replace(',', '.')) || 0;\n}\n\n// Função para abreviar os números\nfunction abreviarValor(valor) {\n  if (valor >= 1e6) {\n    return (valor / 1e6).toFixed(1) + ' Milhão';\n  } else if (valor >= 1e3) {\n    return (valor / 1e3).toFixed(0) + ' Mil';\n  } else {\n    return valor.toFixed(0);\n  }\n}\n\n// Determinar a cor com base no tema\nconst themeColor = context.grafana.theme.name === 'Light' ? '#000' : '#FFF';\n\n// Agrupando os valores recebidos por mês considerando apenas o status \"R\"\nconst recebidosPorMes = financeiro_data_vencimento.reduce((acc, data, index) => {\n  if (financeiro_status[index] === 'R') {  // Considera apenas status \"R\"\n    const mesAno = formatarMesAno(data);\n    const valor = converterValor(financeiro_pagamento_valor[index]);\n\n    if (!isNaN(valor)) {\n      acc[mesAno] = (acc[mesAno] || 0) + valor;\n    }\n  }\n  return acc;\n}, {});\n\n// Ordenando os meses em ordem crescente\nconst mesesOrdenados = Object.keys(recebidosPorMes).sort((a, b) => new Date(a + \"-01\") - new Date(b + \"-01\"));\nconst valoresOrdenados = mesesOrdenados.map(mes => recebidosPorMes[mes]);\n\n// Paleta de cores personalizada\nconst paletaCores = [\n  \"#001449\",\n  \"#012677\",\n  \"#005BC5\",\n  \"#00B4FC\",\n  \"#17F9FF\"\n];\n\n\n\n// Configuração do gráfico de barras verticais com Apache ECharts\nreturn {\n  grid: {\n    left: '2%',\n    right: '2%',\n    bottom: '2%',\n    containLabel: true\n  },\n  xAxis: {\n    type: 'category',\n    data: mesesOrdenados,\n    axisLine: { show: true },\n    axisTick: { show: false },\n    splitLine: { show: false }\n  },\n  yAxis: {\n    type: 'value',\n    axisLine: { show: true },\n    axisTick: { show: true },\n    splitLine: { show: false },\n    axisLabel: {\n      formatter: function (value) {\n        return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 2 });\n      }\n    }\n  },\n  series: [{\n    data: valoresOrdenados,\n    type: 'bar',\n    showBackground: false,\n    backgroundStyle: {\n      color: 'rgba(180, 180, 180, 0.2)'\n    },\n    itemStyle: {\n      color: function (params) {\n        return paletaCores[params.dataIndex % paletaCores.length];\n      },\n      borderRadius: 6\n    },\n    label: {\n      show: true,\n      position: 'top',\n      color: themeColor,  // Usar a cor determinada pelo tema\n      formatter: function (params) {\n        return abreviarValor(params.value);\n      }\n    }\n  }],\n  tooltip: {\n    trigger: 'axis',\n    axisPointer: {\n      type: 'shadow'\n    },\n    formatter: function (params) {\n      const valor = params[0].value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 2 });\n      return `${params[0].name}: ${valor}`;\n    }\n  }\n};\n",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{\r\n  \"color\": [\r\n    \"#001449\",\r\n    \"#012677\",\r\n    \"#005BC5\",\r\n    \"#00B4FC\",\r\n    \"#17F9FF\"\r\n  ],\r\n  \"backgroundColor\": \"rgba(252,252,252,0)\",\r\n  \"textStyle\": {},\r\n  \"title\": {\r\n    \"textStyle\": {\r\n      \"color\": \"#666666\"\r\n    },\r\n    \"subtextStyle\": {\r\n      \"color\": \"#999999\"\r\n    }\r\n  },\r\n  \"line\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": \"2\"\r\n    },\r\n    \"lineStyle\": {\r\n      \"width\": \"3\"\r\n    },\r\n    \"symbolSize\": \"8\",\r\n    \"symbol\": \"emptyCircle\",\r\n    \"smooth\": false\r\n  },\r\n  \"radar\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": \"2\"\r\n    },\r\n    \"lineStyle\": {\r\n      \"width\": \"3\"\r\n    },\r\n    \"symbolSize\": \"8\",\r\n    \"symbol\": \"emptyCircle\",\r\n    \"smooth\": false\r\n  },\r\n  \"bar\": {\r\n    \"itemStyle\": {\r\n      \"barBorderWidth\": 0,\r\n      \"barBorderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"pie\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"scatter\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"boxplot\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"parallel\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"sankey\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"funnel\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"gauge\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    }\r\n  },\r\n  \"candlestick\": {\r\n    \"itemStyle\": {\r\n      \"color\": \"#e6a0d2\",\r\n      \"color0\": \"transparent\",\r\n      \"borderColor\": \"#e6a0d2\",\r\n      \"borderColor0\": \"#3fb1e3\",\r\n      \"borderWidth\": \"2\"\r\n    }\r\n  },\r\n  \"graph\": {\r\n    \"itemStyle\": {\r\n      \"borderWidth\": 0,\r\n      \"borderColor\": \"#ccc\"\r\n    },\r\n    \"lineStyle\": {\r\n      \"width\": \"1\",\r\n      \"color\": \"#cccccc\"\r\n    },\r\n    \"symbolSize\": \"8\",\r\n    \"symbol\": \"emptyCircle\",\r\n    \"smooth\": false,\r\n    \"color\": [\r\n      \"#001449\",\r\n      \"#012677\",\r\n      \"#005BC5\",\r\n      \"#00B4FC\",\r\n      \"#17F9FF\"\r\n    ],\r\n    \"label\": {\r\n      \"color\": \"#ffffff\"\r\n    }\r\n  },\r\n  \"map\": {\r\n    \"itemStyle\": {\r\n      \"areaColor\": \"#eeeeee\",\r\n      \"borderColor\": \"#aaaaaa\",\r\n      \"borderWidth\": 0.5\r\n    },\r\n    \"label\": {\r\n      \"color\": \"#ffffff\"\r\n    },\r\n    \"emphasis\": {\r\n      \"itemStyle\": {\r\n        \"areaColor\": \"rgba(63,177,227,0.25)\",\r\n        \"borderColor\": \"#3fb1e3\",\r\n        \"borderWidth\": 1\r\n      },\r\n      \"label\": {\r\n        \"color\": \"#3fb1e3\"\r\n      }\r\n    }\r\n  },\r\n  \"geo\": {\r\n    \"itemStyle\": {\r\n      \"areaColor\": \"#eeeeee\",\r\n      \"borderColor\": \"#aaaaaa\",\r\n      \"borderWidth\": 0.5\r\n    },\r\n    \"label\": {\r\n      \"color\": \"#ffffff\"\r\n    },\r\n    \"emphasis\": {\r\n      \"itemStyle\": {\r\n        \"areaColor\": \"rgba(63,177,227,0.25)\",\r\n        \"borderColor\": \"#3fb1e3\",\r\n        \"borderWidth\": 1\r\n      },\r\n      \"label\": {\r\n        \"color\": \"#3fb1e3\"\r\n      }\r\n    }\r\n  },\r\n  \"categoryAxis\": {\r\n    \"axisLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\"\r\n      }\r\n    },\r\n    \"axisTick\": {\r\n      \"show\": false,\r\n      \"lineStyle\": {\r\n        \"color\": \"#333\"\r\n      }\r\n    },\r\n    \"axisLabel\": {\r\n      \"show\": true,\r\n      \"color\": \"#999999\"\r\n    },\r\n    \"splitLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": [\r\n          \"#eeeeee\"\r\n        ]\r\n      }\r\n    },\r\n    \"splitArea\": {\r\n      \"show\": false,\r\n      \"areaStyle\": {\r\n        \"color\": [\r\n          \"rgba(250,250,250,0.05)\",\r\n          \"rgba(200,200,200,0.02)\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"valueAxis\": {\r\n    \"axisLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\"\r\n      }\r\n    },\r\n    \"axisTick\": {\r\n      \"show\": false,\r\n      \"lineStyle\": {\r\n        \"color\": \"#333\"\r\n      }\r\n    },\r\n    \"axisLabel\": {\r\n      \"show\": true,\r\n      \"color\": \"#999999\"\r\n    },\r\n    \"splitLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": [\r\n          \"#eeeeee\"\r\n        ]\r\n      }\r\n    },\r\n    \"splitArea\": {\r\n      \"show\": false,\r\n      \"areaStyle\": {\r\n        \"color\": [\r\n          \"rgba(250,250,250,0.05)\",\r\n          \"rgba(200,200,200,0.02)\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"logAxis\": {\r\n    \"axisLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\"\r\n      }\r\n    },\r\n    \"axisTick\": {\r\n      \"show\": false,\r\n      \"lineStyle\": {\r\n        \"color\": \"#333\"\r\n      }\r\n    },\r\n    \"axisLabel\": {\r\n      \"show\": true,\r\n      \"color\": \"#999999\"\r\n    },\r\n    \"splitLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": [\r\n          \"#eeeeee\"\r\n        ]\r\n      }\r\n    },\r\n    \"splitArea\": {\r\n      \"show\": false,\r\n      \"areaStyle\": {\r\n        \"color\": [\r\n          \"rgba(250,250,250,0.05)\",\r\n          \"rgba(200,200,200,0.02)\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"timeAxis\": {\r\n    \"axisLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\"\r\n      }\r\n    },\r\n    \"axisTick\": {\r\n      \"show\": false,\r\n      \"lineStyle\": {\r\n        \"color\": \"#333\"\r\n      }\r\n    },\r\n    \"axisLabel\": {\r\n      \"show\": true,\r\n      \"color\": \"#999999\"\r\n    },\r\n    \"splitLine\": {\r\n      \"show\": true,\r\n      \"lineStyle\": {\r\n        \"color\": [\r\n          \"#eeeeee\"\r\n        ]\r\n      }\r\n    },\r\n    \"splitArea\": {\r\n      \"show\": false,\r\n      \"areaStyle\": {\r\n        \"color\": [\r\n          \"rgba(250,250,250,0.05)\",\r\n          \"rgba(200,200,200,0.02)\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"toolbox\": {\r\n    \"iconStyle\": {\r\n      \"borderColor\": \"#999999\"\r\n    },\r\n    \"emphasis\": {\r\n      \"iconStyle\": {\r\n        \"borderColor\": \"#666666\"\r\n      }\r\n    }\r\n  },\r\n  \"legend\": {\r\n    \"textStyle\": {\r\n      \"color\": \"#999999\"\r\n    }\r\n  },\r\n  \"tooltip\": {\r\n    \"axisPointer\": {\r\n      \"lineStyle\": {\r\n        \"color\": \"#cccccc\",\r\n        \"width\": 1\r\n      },\r\n      \"crossStyle\": {\r\n        \"color\": \"#cccccc\",\r\n        \"width\": 1\r\n      }\r\n    }\r\n  },\r\n  \"timeline\": {\r\n    \"lineStyle\": {\r\n      \"color\": \"#626c91\",\r\n      \"width\": 1\r\n    },\r\n    \"itemStyle\": {\r\n      \"color\": \"#626c91\",\r\n      \"borderWidth\": 1\r\n    },\r\n    \"controlStyle\": {\r\n      \"color\": \"#626c91\",\r\n      \"borderColor\": \"#626c91\",\r\n      \"borderWidth\": 0.5\r\n    },\r\n    \"checkpointStyle\": {\r\n      \"color\": \"#3fb1e3\",\r\n      \"borderColor\": \"#3fb1e3\"\r\n    },\r\n    \"label\": {\r\n      \"color\": \"#626c91\"\r\n    },\r\n    \"emphasis\": {\r\n      \"itemStyle\": {\r\n        \"color\": \"#626c91\"\r\n      },\r\n      \"controlStyle\": {\r\n        \"color\": \"#626c91\",\r\n        \"borderColor\": \"#626c91\",\r\n        \"borderWidth\": 0.5\r\n      },\r\n      \"label\": {\r\n        \"color\": \"#626c91\"\r\n      }\r\n    }\r\n  },\r\n  \"visualMap\": {\r\n    \"color\": [\r\n      \"#2a99c9\",\r\n      \"#afe8ff\"\r\n    ]\r\n  },\r\n  \"dataZoom\": {\r\n    \"backgroundColor\": \"rgba(255,255,255,0)\",\r\n    \"dataBackgroundColor\": \"rgba(222,222,222,1)\",\r\n    \"fillerColor\": \"rgba(114,230,212,0.25)\",\r\n    \"handleColor\": \"#cccccc\",\r\n    \"handleSize\": \"100%\",\r\n    \"textStyle\": {\r\n      \"color\": \"#999999\"\r\n    }\r\n  },\r\n  \"markPoint\": {\r\n    \"label\": {\r\n      \"color\": \"#ffffff\"\r\n    },\r\n    \"emphasis\": {\r\n      \"label\": {\r\n        \"color\": \"#ffffff\"\r\n      }\r\n    }\r\n  }\r\n}",
+          "name": "default"
+        },
+        "visualEditor": {
+          "code": "return {\n  dataset: context.editor.dataset,\n  series: context.editor.series,\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n}\n",
+          "dataset": [],
+          "series": []
+        }
+      },
+      "pluginVersion": "6.1.0",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "status",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "data_vencimento",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "pagamento_valor",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "valor_aberto",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "id_cliente",
+              "text": "",
+              "type": "string"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_API-IXC}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "$.registros",
+          "source": "url",
+          "type": "json",
+          "url": "https://${host}/webservice/v1/fn_areceber",
+          "url_options": {
+            "body_content_type": "application/json",
+            "body_type": "raw",
+            "data": "{\r\n  \"qtype\": \"fn_areceber.data_vencimento\",\r\n  \"query\": \"2024\",\r\n  \"oper\": \"L\",\r\n  \"page\": \"1\",\r\n  \"rp\": \"100000\",\r\n  \"sortname\": \"fn_areceber.id\",\r\n  \"sortorder\": \"desc\"\r\n}",
+            "headers": [
+              {
+                "key": "ixcsoft",
+                "value": "listar"
+              }
+            ],
+            "method": "POST",
+            "params": []
+          }
+        }
+      ],
+      "title": "GESTAO DE RECEBIMENTOS 2024",
+      "type": "volkovlabs-echarts-panel"
+    }
+  ],
+  "refresh": "1h",
+  "schemaVersion": 39,
+  "tags": [
+    "IXC"
+  ],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": true,
+          "text": "2024-08",
+          "value": "2024-08"
+        },
+        "description": "Colocar dessa forma \"2024-01\"",
+        "hide": 0,
+        "label": "DATA FINANCEIRO",
+        "name": "data_financeiro",
+        "options": [
+          {
+            "selected": true,
+            "text": "2024-08",
+            "value": "2024-08"
+          }
+        ],
+        "query": "2024-08",
+        "skipUrlSync": false,
+        "type": "textbox"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "",
+          "value": ""
+        },
+        "hide": 0,
+        "name": "host",
+        "options": [
+          {
+            "selected": true,
+            "text": "",
+            "value": ""
+          }
+        ],
+        "query": "",
+        "skipUrlSync": false,
+        "type": "textbox"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "1d",
+      "1h",
+      "2h",
+      "3h"
+    ]
+  },
+  "timezone": "browser",
+  "title": "IXC-FINANCEIRO-API",
+  "uid": "bdt9q4osmkf7kdai",
+  "version": 3,
+  "weekStart": ""
+}
